@@ -2,10 +2,10 @@
 const mysql = require("mysql2");
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_NAME || "db_crayons",
+  host: process.env.DB_HOST || "mysql-mipaginawebsite.alwaysdata.net",
+  user: process.env.DB_USER || "427655",
+  password: process.env.DB_PASSWORD || "i2321108@continental.sa",
+  database: process.env.DB_NAME || "mipaginawebsite_nodejs",
   waitForConnections: true,
   connectionLimit: 5,
   queueLimit: 0,
