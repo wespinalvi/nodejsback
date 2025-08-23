@@ -22,7 +22,7 @@ app.use(cors({
     'http://localhost:5173',           // Tu frontend local
     'http://localhost:3000',           // Frontend alternativo
     'http://localhost:4173',           // Vite preview
-    'https://micole-p6jy.vercel.app/', // Tu dominio de producción (cambia esto)
+    'https://micole-p6jy.vercel.app', // Tu frontend en Vercel
     process.env.FRONTEND_URL           // Variable de entorno para flexibilidad
   ].filter(Boolean), // Filtra valores undefined/null
   credentials: true,                   // Permite cookies/headers de autenticación
