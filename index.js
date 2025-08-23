@@ -17,7 +17,18 @@ const asistenciaRoutes = require("./src/routes/asistenciaRoutes");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',           // Tu frontend local
+    'http://localhost:3000',           // Frontend alternativo
+    'http://localhost:4173',           // Vite preview
+    'https://tu-dominio-frontend.com', // Tu dominio de producción (cambia esto)
+    process.env.FRONTEND_URL           // Variable de entorno para flexibilidad
+  ].filter(Boolean), // Filtra valores undefined/null
+  credentials: true,                   // Permite cookies/headers de autenticación
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+}));
 app.use(express.json());
 
 // Rutas
