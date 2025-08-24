@@ -2,10 +2,11 @@
 const mysql = require("mysql2");
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || "mysql-mipaginawebsite.alwaysdata.net",
-  user: process.env.DB_USER || "427655",
-  password: process.env.DB_PASSWORD || "i2321108@continental.sa",
-  database: process.env.DB_NAME || "mipaginawebsite_nodejs",
+  host: process.env.DB_HOST || "yamabiko.proxy.rlwy.net",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "iDnthvFvHtooQZEijFpzgWgKbhiOdYWY",
+  database: process.env.DB_NAME || "railway",
+  port: process.env.DB_PORT || 16768,
   waitForConnections: true,
   connectionLimit: 5,
   queueLimit: 0,
