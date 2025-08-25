@@ -134,12 +134,12 @@ const generarPagoCuota = async (req, res) => {
       },
       external_reference,
       back_urls: {
-        success: "https://905247ace5d3.ngrok-free.app/pago-exitoso",
-        failure: "https://905247ace5d3.ngrok-free.app/pago-fallido",
-        pending: "https://905247ace5d3.ngrok-free.app/pago-pendiente"
+        success: "https://nodejsback-production.up.railway.app/pago-exitoso",
+        failure: "https://nodejsback-production.up.railway.app/pago-fallido",
+        pending: "https://nodejsback-production.up.railway.app/pago-pendiente"
       },
       auto_return: "approved",
-      notification_url: "https://905247ace5d3.ngrok-free.app/api/pago/mercadopago/webhook" // Añadir URL de notificación
+      notification_url: "https://nodejsback-production.up.railway.app/api/pago/mercadopago/webhook" // Añadir URL de notificación
     };
     console.log('Preferencia a enviar a Mercado Pago:', JSON.stringify(preferenciaData, null, 2));
 
