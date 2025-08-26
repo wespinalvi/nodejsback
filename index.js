@@ -14,8 +14,10 @@ const pagoRoutes = require("./src/routes/pagoRoutes");
 const justificacionRoutes = require("./src/routes/justificacionRoutes");
 const asistenciaRoutes = require("./src/routes/asistenciaRoutes");
 const chatRoutes = require("./src/routes/chatRoutes");
+const { pool } = require("./src/config/database");
 
 const app = express();
+app.locals.pool = pool;
 
 // Middleware
 app.use(cors({
