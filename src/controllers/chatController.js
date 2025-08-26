@@ -208,6 +208,6 @@ const chat = async (req, res) => {
   }
 };
 
-module.exports = { chat };
+module.exports = chat;
 
 
