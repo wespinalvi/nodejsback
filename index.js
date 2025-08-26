@@ -13,6 +13,7 @@ const cuotasRoutes = require("./src/routes/cuotasRoutes");
 const pagoRoutes = require("./src/routes/pagoRoutes");
 const justificacionRoutes = require("./src/routes/justificacionRoutes");
 const asistenciaRoutes = require("./src/routes/asistenciaRoutes");
+const chatRoutes = require("./src/routes/chatRoutes");
 
 const app = express();
 
@@ -49,6 +50,7 @@ app.use("/api/cuotas", cuotasRoutes);
 app.use("/api/pago", pagoRoutes);
 app.use("/api/justificaciones", justificacionRoutes);
 app.use("/api/asistencia", asistenciaRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.get("/pago-exitoso", (req, res) => {
   res.send("¡Pago exitoso! Gracias por tu compra.");
